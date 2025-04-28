@@ -6,3 +6,6 @@ numpy
 seaborn
 matplotlib
 streamlit
+boto3
+jupyter
+google-auth

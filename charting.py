@@ -1,24 +1,38 @@
+import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-import matplotlib.pyplot as plt
 
 mapper = {
-    'gpt-4-turbo-preview': 'GPT-4 Turbo',
-    'gpt-4o': 'GPT-4o',
-    'gpt-4o-mini-2024-07-18': 'GPT-4o Mini',
-    'claude-3-opus-20240229': 'Claude 3 Opus',
-    'claude-3-5-sonnet-20240620': 'Claude 3.5 Sonnet',
-    'gemini-1_5-pro': 'Gemini 1.5 Pro',
-    'gemini-1_0-pro': 'Gemini 1.0 Pro',
-    'mistral-large-latest': 'Mistral Large 2',
-    'open-mixtral-8x22b': 'Mistral 8x22B',
-    'meta_llama3-70b-instruct-v1_0': 'Llama 3 70B',
-    'meta_llama3-1-70b-instruct-v1_0': 'Llama 3.1 70B',
-    'command-r': 'Command R',
-    'command-r-plus': 'Command R Pro',
-    'Meta-Llama-3-1-405B-Instruct-jjo_eastus_models_ai_azure_com': 'Llama 3.1 405B',
-    'Meta-Llama-3-1-70B-Instruct-ostu_eastus_models_ai_azure_com': 'Llama 3.1 70B',
+    "gemini-2_5-flash-preview_thinking": "Gemini 2.5 Flash",
+    "gemini-2_5-pro-preview-03-25": "Gemini 2.5 Pro",
+    "gemma-3-27b-it": "Gemma 3 27B",
+    "o1-pro": "o1 Pro",
+    "o1": "o1",
+    "o4-mini-high": "o4 Mini High",
+    "o3": "o3",
+    "o3-mini": "o3 Mini",
+    "o3-mini-high": "o3 Mini High",
+    "o4-mini": "o4 Mini",
+    "gpt-4_1": "GPT-4.1",
+    "gpt-4_5-preview": "GPT-4.5",
+    "gpt-4o-2024-11-20": "GPT-4o",
+    "grok-3-mini-beta": "Grok 3 Mini Beta",
+    "grok-3-beta": "Grok 3 Beta",
+    "deepseek-chat-v3-0324": "DeepSeek Chat V3",
+    "deepseek-r1-zero_free": "DeepSeek R1 Zero",
+    "deepseek-r1": "DeepSeek R1",
+    "claude-3_7-sonnet_thinking": "Claude 3.7 Sonnet Thinking",
+    "claude-3_7-sonnet": "Claude 3.7 Sonnet",
+    "claude-3_5-sonnet": "Claude 3.5 Sonnet",
+    "llama-4-maverick": "Llama 4 Maverick",
+    "qwen-max": "Qwen Max",
+    "qwen-2_5-coder-32b-instruct": "Qwen 2.5 Coder",
+    "mistral-large-2411": "Mistral Large",
+    "codestral-2501": "Codestral 2501",
+    "command-a": "Command A",
+    "sonar-reasoning-pro": "Sonar Reasoning Pro",
 }
+
 
 def define_data(final_stats: pd.DataFrame):
     ## Define the data
@@ -28,21 +42,21 @@ def define_data(final_stats: pd.DataFrame):
     # lower_bounds = [10, 16, 15, 15, 15, 15, 13, 11]
     # upper_bounds = [10, 16, 15, 15, 15, 15, 13, 11]
 
-    final_stats['model'] = final_stats['model'].map(mapper).fillna(final_stats['model'])
+    final_stats["model"] = final_stats["model"].map(mapper).fillna(final_stats["model"])
     final_stats.loc[-1] = {
-        'model': 'Human level*',
-        'mean_score': 86,
-        'std_dev_score': 0,
-        'z_interval_error': 0,
-        'ci_lower': 93,
-        'ci_upper': 78,
+        "model": "Human level*",
+        "mean_score": 86,
+        "std_dev_score": 0,
+        "z_interval_error": 0,
+        "ci_lower": 93,
+        "ci_upper": 78,
     }
-    final_stats = final_stats.sort_values(by='mean_score', ascending=False)
+    final_stats = final_stats.sort_values(by="mean_score", ascending=False)
 
-    models = final_stats['model'].to_list()
-    mean_scores = final_stats['mean_score'].to_list()
-    lower_bounds = final_stats['ci_lower'].to_list()
-    upper_bounds = final_stats['ci_upper'].to_list()
+    models = final_stats["model"].to_list()
+    mean_scores = final_stats["mean_score"].to_list()
+    lower_bounds = final_stats["ci_lower"].to_list()
+    upper_bounds = final_stats["ci_upper"].to_list()
 
     data = {
         "Model": models,
@@ -53,42 +67,54 @@ def define_data(final_stats: pd.DataFrame):
     return pd.DataFrame(data)
 
 
-def create_performance_chart(final_stats: pd.DataFrame, title="LLM Linguistic Benchmark Performance",
-                             highlight_models=None):
+def create_performance_chart(
+    final_stats: pd.DataFrame, title="LLM Linguistic Benchmark Performance", highlight_models=None
+):
     if highlight_models is None:
         highlight_models = []
 
     df = define_data(final_stats)
     # Create a basic barplot
     sns.set_theme(style="whitegrid")
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(10, 8))
 
     # Different colors for different models
-    colors = ['skyblue' if model not in highlight_models else 'orange' for model in df["Model"]]
-    barplot = sns.barplot(data=df, x="Model", y="Average", palette=colors, errorbar=None)
+    colors = ["skyblue" if model not in highlight_models else "orange" for model in df["Model"]]
+    barplot = sns.barplot(data=df, y="Model", x="Average", palette=colors, errorbar=None)
 
-    # Shade the first bar with black cross lines
-    for i, bar in enumerate(barplot.patches):  # Loop through the bars
-        if df["Model"][i] == "Human level*":  # Check if it is the Human level bar
-            bar.set_hatch('///')  # Apply hatching
+    # Shade the "Human level*" bar
+    for i, bar in enumerate(barplot.patches):
+        if df["Model"][i] == "Human level*":
+            bar.set_hatch("///")
 
-    # Add confidence intervals as vertical lines with caps
-    capwidth = 0.1  # Width of the cap lines
+    # Add confidence intervals (horizontal lines now)
+    capwidth = 0.5
     for i, model in enumerate(df["Model"]):
-        plt.plot([i, i], [df["Confidence Interval Low"][i], df["Confidence Interval High"][i]],
-                 color='grey', lw=1)
-        # Add horizontal caps
-        plt.plot([i - capwidth / 2, i + capwidth / 2],
-                 [df["Confidence Interval Low"][i], df["Confidence Interval Low"][i]],
-                 color='grey', lw=1)
-        plt.plot([i - capwidth / 2, i + capwidth / 2],
-                 [df["Confidence Interval High"][i], df["Confidence Interval High"][i]],
-                 color='grey', lw=1)
+        plt.plot(
+            [df["Confidence Interval Low"][i], df["Confidence Interval High"][i]],
+            [i, i],
+            color="grey",
+            lw=1,
+        )
+        # Caps
+        plt.plot(
+            [df["Confidence Interval Low"][i], df["Confidence Interval Low"][i]],
+            [i - capwidth / 2, i + capwidth / 2],
+            color="grey",
+            lw=1,
+        )
+        plt.plot(
+            [df["Confidence Interval High"][i], df["Confidence Interval High"][i]],
+            [i - capwidth / 2, i + capwidth / 2],
+            color="grey",
+            lw=1,
+        )
 
     plt.title(title, fontsize=18)
-    plt.xlabel("", fontsize=14)
-    plt.ylabel("Average Score (%)", fontsize=14)
-    plt.xticks(rotation=60, fontsize=14)
+    plt.xlabel("Average Score (%)", fontsize=14)
+    plt.ylabel("")
+    plt.yticks(fontsize=14)
+    plt.xticks(fontsize=14)
     plt.tight_layout()
 
     return barplot, plt

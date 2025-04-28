@@ -1,0 +1,482 @@
+{
+    "1": {
+        "category": "Puzzle",
+        "question": "You have six horses and want to race them to see which is fastest. What is the minimum number of races needed to do this?",
+        "human_answer": "Race them on a single race track with at least six lanes - the order in which they cross the finish line determines which is the fastest.",
+        "correct_answer": "One",
+        "multiple_choice": [
+            "Three",
+            "One",
+            "Two",
+            "Unknown"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nYou have six horses and want to race them to see which is fastest. What is the minimum number of races needed to do this?\n\n<POSSIBLE ANSWERS>\nA. Three\nB. One\nC. Two\nD. Unknown\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "B",
+        "model_answer": "```json\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"To find the fastest horse among six, you can simply race all six horses against each other in a single race. The horse that finishes first is the fastest.\"}\n```",
+        "score": ""
+    },
+    "2": {
+        "category": "Puzzle",
+        "question": "Suppose you're on a game show, and you're given the choice of three doors: Behind one door is a gold bar; behind the others, rotten vegetables. You pick a door, say No. 1, and the host asks you 'Do you want to pick door No. 2 instead?' What choice of door now gives you the biggest advantage?",
+        "human_answer": "It is not an advantage to switch. It makes no difference if I switch or not because no additional material information has been provided since the initial choice.",
+        "correct_answer": "They have equal probability of winning",
+        "multiple_choice": [
+            "They have equal probability of winning",
+            "Door No.3",
+            "Door No.2",
+            "Door No.1"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nSuppose you're on a game show, and you're given the choice of three doors: Behind one door is a gold bar; behind the others, rotten vegetables. You pick a door, say No. 1, and the host asks you 'Do you want to pick door No. 2 instead?' What choice of door now gives you the biggest advantage?\n\n<POSSIBLE ANSWERS>\nA. They have equal probability of winning\nB. Door No.3\nC. Door No.2\nD. Door No.1\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"D\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "A",
+        "model_answer": "```json\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"This is a variation of the Monty Hall problem. Unlike the standard version, the host does not reveal information by opening a door. The offer is simply to switch from Door 1 to Door 2. Since no new information is provided, the initial 1/3 probability for each door remains unchanged. Switching from Door 1 to Door 2 offers no advantage; they both have a 1/3 chance of winning.\"}\n```",
+        "score": ""
+    },
+    "3": {
+        "category": "Spatial",
+        "question": "You are playing Russian roulette with a six-shooter revolver. Your opponent puts in five bullets, spins the chambers and fires at himself, but no bullet comes out. He gives you the choice of whether or not you should spin the chambers again before firing at yourself. Should you spin?",
+        "human_answer": "Yes, you should spin again. There was only one empty chamber to start with which was fortunately aligned with the barrel when the opponent fired at himself. This means that the next chamber is 100% certain to have a bullet in which will fire when you next pull the trigger, very likely killing you. However, if you spin the chamber then you have a 5/6 chance of firing a bullet and a 1/6 chance of getting the empty chamber.",
+        "correct_answer": "Yes, you should spin again",
+        "multiple_choice": [
+            "No, you should not spin again",
+            "It makes no difference if you spin again or not",
+            "Yes, you should spin again",
+            "The probabilities are random and unknown"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nYou are playing Russian roulette with a six-shooter revolver. Your opponent puts in five bullets, spins the chambers and fires at himself, but no bullet comes out. He gives you the choice of whether or not you should spin the chambers again before firing at yourself. Should you spin?\n\n<POSSIBLE ANSWERS>\nA. No, you should not spin again\nB. It makes no difference if you spin again or not\nC. Yes, you should spin again\nD. The probabilities are random and unknown\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "```json\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"If you don't spin, you are guaranteed to fire a bullet because the empty chamber was just used by your opponent. If you spin, you randomize the chambers, giving you a 5/6 chance of firing a bullet. A 5/6 chance is better than a 1 (certain) chance.\"}\n```",
+        "score": ""
+    },
+    "4": {
+        "category": "Puzzle",
+        "question": "A farmer wants to cross a river and take with him a wolf, a goat and a cabbage. He has a boat with three secure separate compartments. If the wolf and the goat are alone on one shore, the wolf will eat the goat. If the goat and the cabbage are alone on the shore, the goat will eat the cabbage. What is the minimum number of crossings the farmer needs to make to bring the wolf, the goat and the cabbage across the river without anything being eaten?",
+        "human_answer": "Place the wolf, goat, and cabbage in separate secure compartments in the boat and row across the river in one crossing without being harmed.",
+        "correct_answer": "One crossing",
+        "multiple_choice": [
+            "One crossing",
+            "Five crossings",
+            "The animals are not able to be transported across the river without being eaten.",
+            "Seven crossings"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nA farmer wants to cross a river and take with him a wolf, a goat and a cabbage. He has a boat with three secure separate compartments. If the wolf and the goat are alone on one shore, the wolf will eat the goat. If the goat and the cabbage are alone on the shore, the goat will eat the cabbage. What is the minimum number of crossings the farmer needs to make to bring the wolf, the goat and the cabbage across the river without anything being eaten?\n\n<POSSIBLE ANSWERS>\nA. One crossing\nB. Five crossings\nC. The animals are not able to be transported across the river without being eaten.\nD. Seven crossings\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"D\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "A",
+        "model_answer": "```json\n{\"ANSWER\": \"D\", \"SHORT EXPLANATION\": \"The classic solution involves 7 crossings. The farmer must take the goat across, return alone, take either the wolf or cabbage across, bring the goat back, take the remaining item across, return alone, and finally take the goat across again.\"}\n```",
+        "score": ""
+    },
+    "5": {
+        "category": "Puzzle",
+        "question": "Bob has three boxes in front of him - Box A, Box B and Box C. Bob does not know what is in the boxes. Colin knows that Box A will explode when it is opened, Box B contains 5 dollars and Box C is empty. Should Bob open a box? What box should Bob open?",
+        "human_answer": "Bob should not open a box because he has a 1/3 chance of killing himself. The 1/3 chance of “winning” $5 is generally not worth that sort of risk!",
+        "correct_answer": "No, Bob should not open any box",
+        "multiple_choice": [
+            "No, Bob should not open any box",
+            "Yes, Box C",
+            "Yes, Box B",
+            "Yes, Box A"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nBob has three boxes in front of him - Box A, Box B and Box C. Bob does not know what is in the boxes. Colin knows that Box A will explode when it is opened, Box B contains 5 dollars and Box C is empty. Should Bob open a box? What box should Bob open?\n\n<POSSIBLE ANSWERS>\nA. No, Bob should not open any box\nB. Yes, Box C\nC. Yes, Box B\nD. Yes, Box A\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "A",
+        "model_answer": "```json\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"Based on the actual contents, opening Box B yields 5 dollars, which is the best possible outcome for Bob without any negative consequences. Opening Box A results in an explosion, and opening Box C or not opening any box results in nothing.\"}\n```",
+        "score": ""
+    },
+    "6": {
+        "category": "Counting",
+        "question": "A robot has 8 arms. There are 5 objects on a table: a knife, a fork, a spoon, a teddy bear and a doll. The robot picks up each object with an arm. He then shakes hands with himself. How many arms does he have free?",
+        "human_answer": "A hand is used for each of the five objects and then two hands are used to shake hands with himself. This means that seven hands are being used, leaving one arm/hand free.",
+        "correct_answer": "1",
+        "multiple_choice": [
+            "1",
+            "2",
+            "0",
+            "Other"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nA robot has 8 arms. There are 5 objects on a table: a knife, a fork, a spoon, a teddy bear and a doll. The robot picks up each object with an arm. He then shakes hands with himself. How many arms does he have free?\n\n<POSSIBLE ANSWERS>\nA. 1\nB. 2\nC. 0\nD. Other\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"D\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "A",
+        "model_answer": "```json\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"The robot starts with 8 arms. It uses 5 arms to pick up the objects, leaving 8 - 5 = 3 arms free. It then uses 2 of these remaining arms to shake hands with itself, leaving 3 - 2 = 1 arm free.\"}\n```",
+        "score": ""
+    },
+    "7": {
+        "category": "Spatial",
+        "question": "Alan, Bob, Colin, Dave and Emily are standing in a circle. Alan is on Bob's immediate left. Bob is on Colin's immediate left. Colin is on Dave's immediate left. Dave is on Emily's immediate left. Who is on Alan's immediate right?",
+        "human_answer": "Bob is on Alan's immediate right because it is stated that Alan is on Bob's immediate left.",
+        "correct_answer": "'Bob'",
+        "multiple_choice": [
+            "No one",
+            "'Dave'",
+            "'Emily'",
+            "'Bob'"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nAlan, Bob, Colin, Dave and Emily are standing in a circle. Alan is on Bob's immediate left. Bob is on Colin's immediate left. Colin is on Dave's immediate left. Dave is on Emily's immediate left. Who is on Alan's immediate right?\n\n<POSSIBLE ANSWERS>\nA. No one\nB. 'Dave'\nC. 'Emily'\nD. 'Bob'\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "D",
+        "model_answer": "```json\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"The relationships describe a circle: Emily -> Dave -> Colin -> Bob -> Alan -> Emily (where -> means 'is on the immediate left of'). Therefore, the person on Alan's immediate right is Emily.\"}\n```",
+        "score": ""
+    },
+    "8": {
+        "category": "Linguistic",
+        "question": "Write me a sentence without any words that appear in The Bible",
+        "human_answer": "Cryptographic algorithms safeguard nuclear warheads.",
+        "correct_answer": "Cryptographic algorithms safeguard nuclear warheads.",
+        "multiple_choice": [
+            "Our computer, engineered in a contemporary lab, processes data flawlessly and efficiently.",
+            "The computer swiftly executed complex algorithms.",
+            "Cryptographic algorithms safeguard nuclear warheads.",
+            "Quixotic zephyrs vexed the jabberwocky's kumquat garden."
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nWrite me a sentence without any words that appear in The Bible\n\n<POSSIBLE ANSWERS>\nA. Our computer, engineered in a contemporary lab, processes data flawlessly and efficiently.\nB. The computer swiftly executed complex algorithms.\nC. Cryptographic algorithms safeguard nuclear warheads.\nD. Quixotic zephyrs vexed the jabberwocky's kumquat garden.\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"D\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "```json\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"Option C contains words like 'Cryptographic', 'algorithms', 'safeguard', 'nuclear', and 'warheads', none of which appear in standard English translations of The Bible. Options A, B, and D contain common words like 'Our', 'in', 'the', 'vexed', and 'garden' which are found in biblical texts.\"}\n```",
+        "score": ""
+    },
+    "9": {
+        "category": "Popular science",
+        "question": "Which weighs more, a pound of water, two pounds of bricks, a pound of feathers, or three pounds of air.",
+        "human_answer": "Three pounds of air.",
+        "correct_answer": "Three pounds of air.",
+        "multiple_choice": [
+            "A pound of feathers.",
+            "They all weigh the same.",
+            "Three pounds of air.",
+            "Two pounds of brick."
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nWhich weighs more, a pound of water, two pounds of bricks, a pound of feathers, or three pounds of air.\n\n<POSSIBLE ANSWERS>\nA. A pound of feathers.\nB. They all weigh the same.\nC. Three pounds of air.\nD. Two pounds of brick.\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"D\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "```json\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"Comparing the weights given: a pound of water (1 lb), two pounds of bricks (2 lbs), a pound of feathers (1 lb), and three pounds of air (3 lbs). Three pounds of air is the largest weight.\"}\n```",
+        "score": ""
+    },
+    "10": {
+        "category": "Relational",
+        "question": "I get out on the top floor (third floor) at street level. How many stories is the building above the ground?",
+        "human_answer": "One story above the ground, as exiting at street level requires a single story building.",
+        "correct_answer": "One story above the ground",
+        "multiple_choice": [
+            "Zero stories above the ground",
+            "Two stories above the ground",
+            "One story above the ground",
+            "Three stories above the ground"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nI get out on the top floor (third floor) at street level. How many stories is the building above the ground?\n\n<POSSIBLE ANSWERS>\nA. Zero stories above the ground\nB. Two stories above the ground\nC. One story above the ground\nD. Three stories above the ground\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "```json\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"The third floor is at street level, which means the third floor is the ground floor. Therefore, there are no stories above the ground.\"}\n```",
+        "score": ""
+    },
+    "11": {
+        "category": "Spatial",
+        "question": "In a toy box, there's a red ball, a blue truck, and a green dinosaur. The red ball is not next to the blue truck, and the green dinosaur is next to the red ball. Which toy is in the middle?",
+        "human_answer": "The green dinosaur.",
+        "correct_answer": "'The green dinosaur'",
+        "multiple_choice": [
+            "None of them are positioned in the middle.",
+            "'The green dinosaur'",
+            "'The red ball'",
+            "'The blue truck'"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nIn a toy box, there's a red ball, a blue truck, and a green dinosaur. The red ball is not next to the blue truck, and the green dinosaur is next to the red ball. Which toy is in the middle?\n\n<POSSIBLE ANSWERS>\nA. None of them are positioned in the middle.\nB. 'The green dinosaur'\nC. 'The red ball'\nD. 'The blue truck'\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"D\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "B",
+        "model_answer": "```json\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"The green dinosaur is next to the red ball, meaning they are adjacent. The red ball is not next to the blue truck. This forces the blue truck to be on the other side of the green dinosaur from the red ball, placing the green dinosaur in the middle.\"}\n```",
+        "score": ""
+    },
+    "12": {
+        "category": "Spatial",
+        "question": "Four children - Alex, Bella, Charlie, and Dana - are sitting around a picnic table. Alex is facing Bella. Charlie is sitting to the right of Bella. Who is sitting to the left of Alex?",
+        "human_answer": "Dana",
+        "correct_answer": "'Dana'",
+        "multiple_choice": [
+            "No one",
+            "'Charlie'",
+            "'Dana'",
+            "'Bella'"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nFour children - Alex, Bella, Charlie, and Dana - are sitting around a picnic table. Alex is facing Bella. Charlie is sitting to the right of Bella. Who is sitting to the left of Alex?\n\n<POSSIBLE ANSWERS>\nA. No one\nB. 'Charlie'\nC. 'Dana'\nD. 'Bella'\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "```json\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"Alex is opposite Bella. Charlie is to Bella's right. In a circle of four, this places Charlie next to Bella and opposite Dana. The order is Bella, Charlie (right of Bella), Alex (opposite Bella), and Dana (left of Bella/right of Alex). Moving left from Alex leads to Dana.\"}\n```",
+        "score": ""
+    },
+    "13": {
+        "category": "Spatial",
+        "question": "A man leaves home at 0m elevation, makes a left turn and walks straight for a km and reaches 300m elevation, makes another left turn and walks straight for a km and reaches 500m elevation, makes another left turn and walks straight for a km and reaches 900m elevation, and turns left again and walks straight for a km. How far away is he from his starting point and what is his final elevation?",
+        "human_answer": "He is back at his starting point and at 0m elevation.",
+        "correct_answer": "0m from starting point, 0m elevation.",
+        "multiple_choice": [
+            "We cannot accurately determine his final position and elevation.",
+            "0m from starting point, 1700m elevation.",
+            "2000m from starting point, 900m elevation.",
+            "0m from starting point, 0m elevation."
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nA man leaves home at 0m elevation, makes a left turn and walks straight for a km and reaches 300m elevation, makes another left turn and walks straight for a km and reaches 500m elevation, makes another left turn and walks straight for a km and reaches 900m elevation, and turns left again and walks straight for a km. How far away is he from his starting point and what is his final elevation?\n\n<POSSIBLE ANSWERS>\nA. We cannot accurately determine his final position and elevation.\nB. 0m from starting point, 1700m elevation.\nC. 2000m from starting point, 900m elevation.\nD. 0m from starting point, 0m elevation.\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"D\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "D",
+        "model_answer": "```json\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"The man makes four left turns and walks the same distance each time, forming a square and returning to his starting horizontal position (0m away). The elevations reached are 300m, 500m, 900m. The differences are 200m and 400m. Assuming the difference doubles again (800m), the final elevation is 900m + 800m = 1700m.\"}\n```",
+        "score": ""
+    },
+    "14": {
+        "category": "Puzzle",
+        "question": "A group of four people needs to cross a bridge at night. The bridge is very old and rickety. They have only one torch and because it's night-time, the torch is necessary to cross the bridge. Each person walks at a different speed: - A takes 1 minute to cross, - B takes 2 minutes, - C takes 5 minutes, and - D takes 10 minutes. What is the fastest time they can all get across the bridge?",
+        "human_answer": "10 minutes, the speed of the slowest person as they cross the bridge together.",
+        "correct_answer": "10 minutes",
+        "multiple_choice": [
+            "There is not enough information to determine the fastest time.",
+            "14 minutes",
+            "10 minutes",
+            "17 minutes"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nA group of four people needs to cross a bridge at night. The bridge is very old and rickety. They have only one torch and because it's night-time, the torch is necessary to cross the bridge. Each person walks at a different speed: - A takes 1 minute to cross, - B takes 2 minutes, - C takes 5 minutes, and - D takes 10 minutes. What is the fastest time they can all get across the bridge?\n\n<POSSIBLE ANSWERS>\nA. There is not enough information to determine the fastest time.\nB. 14 minutes\nC. 10 minutes\nD. 17 minutes\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "",
+        "score": ""
+    },
+    "15": {
+        "category": "Puzzle",
+        "question": "You're in a room with two doors that lead out. One door leads to certain death, and the other door leads to freedom. There are two guardians, one by each door. One taller guardian always tells the truth and guards the death door, the other always lies. What is the minimum number of questions needed to ask the guards to get to safety?",
+        "human_answer": "Zero questions. The door to freedom is behind the shorter guardian.",
+        "correct_answer": "Zero questions",
+        "multiple_choice": [
+            "The door leading to freedom can never be determined.",
+            "Zero questions",
+            "One question",
+            "Two questions"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nYou're in a room with two doors that lead out. One door leads to certain death, and the other door leads to freedom. There are two guardians, one by each door. One taller guardian always tells the truth and guards the death door, the other always lies. What is the minimum number of questions needed to ask the guards to get to safety?\n\n<POSSIBLE ANSWERS>\nA. The door leading to freedom can never be determined.\nB. Zero questions\nC. One question\nD. Two questions\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "B",
+        "model_answer": "```json\n{\n  \"ANSWER\": \"B\",\n  \"SHORT EXPLANATION\": \"The problem states the taller guardian always tells the truth and guards the death door. By identifying the taller guardian (by height), you immediately know which door leads to death. The other door is the one to freedom. No questions are needed.\"\n}\n```",
+        "score": ""
+    },
+    "16": {
+        "category": "Puzzle",
+        "question": "You have 3 switches in front of you - A, B and C. You have 3 light bulbs in front of you in the same room - one red, one blue, one purple. They are LED and do not get warm when turned on. You want to know which switch turns on which light bulb. What is the best way to determine this?",
+        "human_answer": "A process of elimination. Test each switch independently and observe which light bulb turns on for each.",
+        "correct_answer": "Turing each switch on one at a time and observing the bulbs.",
+        "multiple_choice": [
+            "Turing all of the switches on at once and observing the bulbs.",
+            "You must walk into another room to observe the bulbs.",
+            "Turing each switch on one at a time and observing the bulbs.",
+            "Turing two switches on for a while, turn one off, then touching the bulbs too see which is warm and which one is one."
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nYou have 3 switches in front of you - A, B and C. You have 3 light bulbs in front of you in the same room - one red, one blue, one purple. They are LED and do not get warm when turned on. You want to know which switch turns on which light bulb. What is the best way to determine this?\n\n<POSSIBLE ANSWERS>\nA. Turing all of the switches on at once and observing the bulbs.\nB. You must walk into another room to observe the bulbs.\nC. Turing each switch on one at a time and observing the bulbs.\nD. Turing two switches on for a while, turn one off, then touching the bulbs too see which is warm and which one is one.\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"D\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "```json\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"Turning on one switch at a time allows you to directly observe which bulb is controlled by that specific switch. After testing two switches, the third switch is automatically matched to the remaining bulb. Options A and B do not provide enough information, and option D is impossible as LED bulbs do not get warm.\"}\n```",
+        "score": ""
+    },
+    "17": {
+        "category": "Puzzle",
+        "question": "The Poisoned Wine - A king has 1000 sweet bottles of wine, and one contains a very bitter poison. The poison takes effect exactly 24 hours after consumption. The king needs to find the poisoned bottle in 24 hours for an event. He has 10 prisoners to test the wine. What is the fastest way for him to identify the poisoned bottle?",
+        "human_answer": "Divide the 1000 bottles of wine amongst the 10 prisoners - each receiving 100 bottles. Ask the prisoners to note which bottle tastes very bitter, this is the poisoned one.",
+        "correct_answer": "Divide the bottles of wine amongst the prisoners and get them to note which one tastes bitter.",
+        "multiple_choice": [
+            "Using a binary search strategy with the 10 prisoners, leveraging the concept of binary numbers to minimize the number of tests needed. The king will know results in 24 hours",
+            "Divide the bottles of wine amongst the prisoners and get them to note which one tastes bitter.",
+            "Divide the bottles of wine amongst the prisoners and get them to take a sip and note which one dies in 24 hours.",
+            "Get all of the prisoners to sample each of the bottles of wine and see who dies in 24 hours."
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nThe Poisoned Wine - A king has 1000 sweet bottles of wine, and one contains a very bitter poison. The poison takes effect exactly 24 hours after consumption. The king needs to find the poisoned bottle in 24 hours for an event. He has 10 prisoners to test the wine. What is the fastest way for him to identify the poisoned bottle?\n\n<POSSIBLE ANSWERS>\nA. Using a binary search strategy with the 10 prisoners, leveraging the concept of binary numbers to minimize the number of tests needed. The king will know results in 24 hours\nB. Divide the bottles of wine amongst the prisoners and get them to note which one tastes bitter.\nC. Divide the bottles of wine amongst the prisoners and get them to take a sip and note which one dies in 24 hours.\nD. Get all of the prisoners to sample each of the bottles of wine and see who dies in 24 hours.\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "B",
+        "model_answer": "```json\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"This method uses the prisoners as test subjects. By having them drink from specific bottles (or combinations), the king can observe which prisoners die after 24 hours. The pattern of deaths directly indicates the poisoned bottle, leveraging the poison's known effect and timing. This is the fundamental approach to solving the problem with the given constraints.\"}\n```",
+        "score": ""
+    },
+    "18": {
+        "category": "Linguistic",
+        "question": "Write a grammatically correct sentence without reusing any letter more than once.",
+        "human_answer": "Dogs bark with me.",
+        "correct_answer": "'Dogs bark with me.'",
+        "multiple_choice": [
+            "No such sentence is possible.",
+            "'Dogs bark with me.'",
+            "'The five boxers jog quick.'",
+            "'The quick brown fox jumps over the lazy dog.'"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nWrite a grammatically correct sentence without reusing any letter more than once.\n\n<POSSIBLE ANSWERS>\nA. No such sentence is possible.\nB. 'Dogs bark with me.'\nC. 'The five boxers jog quick.'\nD. 'The quick brown fox jumps over the lazy dog.'\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "B",
+        "model_answer": "```json\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"Option B, 'Dogs bark with me,' is a grammatically correct sentence that uses each letter only once (d, o, g, s, b, a, r, k, w, i, t, h, m, e). Options C and D reuse letters.\"}\n```",
+        "score": ""
+    },
+    "19": {
+        "category": "Spatial",
+        "question": "An arrow points up. We rotate it 90 degrees to the left, mirror it along its flat end, and rotate it another 90 degrees to the left. Which direction is it pointing?",
+        "human_answer": "Up",
+        "correct_answer": "Up",
+        "multiple_choice": [
+            "Up",
+            "Down",
+            "Right",
+            "Left"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nAn arrow points up. We rotate it 90 degrees to the left, mirror it along its flat end, and rotate it another 90 degrees to the left. Which direction is it pointing?\n\n<POSSIBLE ANSWERS>\nA. Up\nB. Down\nC. Right\nD. Left\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "A",
+        "model_answer": "```json\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"Starting up, a 90-degree left rotation makes it point left. Mirroring along the flat end (the tail) reverses its direction, making it point right. A final 90-degree left rotation changes right to up.\"}\n```",
+        "score": ""
+    },
+    "20": {
+        "category": "Linguistic",
+        "question": "Write a sentence where every word starts with the letter A.",
+        "human_answer": "Alice ate an apple after an argument.",
+        "correct_answer": "Alice ate an apple after an argument.",
+        "multiple_choice": [
+            "Apples and apricots are always an amazing afternoon snack.",
+            "The aardvark adored and amazing, appetizing apron.",
+            "Alice ate an apple after an argument.",
+            "Alligators always avoid angry ants aggressively attacking two apples."
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nWrite a sentence where every word starts with the letter A.\n\n<POSSIBLE ANSWERS>\nA. Apples and apricots are always an amazing afternoon snack.\nB. The aardvark adored and amazing, appetizing apron.\nC. Alice ate an apple after an argument.\nD. Alligators always avoid angry ants aggressively attacking two apples.\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "```json\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"Option C, 'Alice ate an apple after an argument,' is the only sentence where every single word begins with the letter 'A'. Options A, B, and D contain words that do not start with 'A' (snack, The, two).\"}\n```",
+        "score": ""
+    },
+    "21": {
+        "category": "Relational",
+        "question": "Sally (a girl) has 3 brothers. Each brother has 2 sisters. How many sisters does Sally have?",
+        "human_answer": "One, as each brother has 2 sisters and Sally is one of them.",
+        "correct_answer": "One",
+        "multiple_choice": [
+            "Two",
+            "One",
+            "Hard to know",
+            "Three"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nSally (a girl) has 3 brothers. Each brother has 2 sisters. How many sisters does Sally have?\n\n<POSSIBLE ANSWERS>\nA. Two\nB. One\nC. Hard to know\nD. Three\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "B",
+        "model_answer": "```json\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"If each of the 3 brothers has 2 sisters, these two sisters are the same girls for all brothers. One of these sisters is Sally. This means there is one other sister besides Sally, totaling 2 sisters in the family. Sally has 2 - 1 = 1 sister.\"}\n```",
+        "score": ""
+    },
+    "22": {
+        "category": "Spatial",
+        "question": "I'm in London and facing west, what direction is Edinburgh?",
+        "human_answer": "Right, as Edinburgh is north of London.",
+        "correct_answer": "Right",
+        "multiple_choice": [
+            "Straight ahead",
+            "Right",
+            "Left",
+            "Behind you"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nI'm in London and facing west, what direction is Edinburgh?\n\n<POSSIBLE ANSWERS>\nA. Straight ahead\nB. Right\nC. Left\nD. Behind you\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"D\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "B",
+        "model_answer": "```json\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"Edinburgh is located almost directly north of London. If you are in London and facing west, north is to your right.\"}\n```",
+        "score": ""
+    },
+    "23": {
+        "category": "Counting",
+        "question": "Count the number of occurrences of the letter 'L' in the word 'LOLLAPALOOZA'.",
+        "human_answer": "Four",
+        "correct_answer": "Four",
+        "multiple_choice": [
+            "Two",
+            "Three",
+            "Four",
+            "Five"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nCount the number of occurrences of the letter 'L' in the word 'LOLLAPALOOZA'.\n\n<POSSIBLE ANSWERS>\nA. Two\nB. Three\nC. Four\nD. Five\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "```json\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"Counting the occurrences of the letter 'L' in 'LOLLAPALOOZA', we find them at the 1st, 3rd, 4th, and 8th positions. This gives a total of four 'L's.\"}\n```",
+        "score": ""
+    },
+    "24": {
+        "category": "Puzzle",
+        "question": "How many pairs of twins do you need in a room for there to be at least a 50% chance that two people have the same birthday?",
+        "human_answer": "1 pair, as twins share the same birthday.",
+        "correct_answer": "1 pair",
+        "multiple_choice": [
+            "23 pairs",
+            "1 pair",
+            "12 pairs",
+            "46 pairs"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nHow many pairs of twins do you need in a room for there to be at least a 50% chance that two people have the same birthday?\n\n<POSSIBLE ANSWERS>\nA. 23 pairs\nB. 1 pair\nC. 12 pairs\nD. 46 pairs\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "B",
+        "model_answer": "```json\n{\n  \"ANSWER\": \"C\",\n  \"SHORT EXPLANATION\": \"The standard Birthday Problem shows you need 23 people for a 50% chance of two having the same birthday. Since each pair of twins adds 2 people to the room, you need enough pairs so the total number of people is at least 23. 12 pairs result in 24 people (12 * 2), which is sufficient for the chance to be over 50%.\"\n}\n```",
+        "score": ""
+    },
+    "25": {
+        "category": "Puzzle",
+        "question": "A partially full hotel has an infinite number of fully furnished rooms. How does it accommodate one more guest?",
+        "human_answer": "By putting the guest in an empty room, as the hotel is only partially full.",
+        "correct_answer": "By putting the guest in an empty room.",
+        "multiple_choice": [
+            "By putting the guest in an empty room.",
+            "You ask each current guest to move to the next room.",
+            "You ask each current guest to move to the room number n*2.",
+            "You cannot accommodate one more guest."
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nA partially full hotel has an infinite number of fully furnished rooms. How does it accommodate one more guest?\n\n<POSSIBLE ANSWERS>\nA. By putting the guest in an empty room.\nB. You ask each current guest to move to the next room.\nC. You ask each current guest to move to the room number n*2.\nD. You cannot accommodate one more guest.\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "A",
+        "model_answer": "```json\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"Since the hotel has an infinite number of rooms and is only partially full, there must be at least one empty room available to place the new guest.\"}\n```",
+        "score": ""
+    },
+    "26": {
+        "category": "Puzzle",
+        "question": "A runaway trolley is heading down the tracks away from five people upwards of the track. You are near a lever that can switch the trolley to another track? How might pulling the lever impact the five people's lives?",
+        "human_answer": "It doesn't impact anyones lives, as the trolley is heading down the tracks in the opposite direction to the five people up the track.",
+        "correct_answer": "It doesn't impact their lives.",
+        "multiple_choice": [
+            "Pulling the lever will save their lives.",
+            "Pulling the lever will take their lives.",
+            "This is an ethical dilemma.",
+            "It doesn't impact their lives."
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nA runaway trolley is heading down the tracks away from five people upwards of the track. You are near a lever that can switch the trolley to another track? How might pulling the lever impact the five people's lives?\n\n<POSSIBLE ANSWERS>\nA. Pulling the lever will save their lives.\nB. Pulling the lever will take their lives.\nC. This is an ethical dilemma.\nD. It doesn't impact their lives.\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "D",
+        "model_answer": "```json\n{\n \"ANSWER\": \"A\",\n \"SHORT EXPLANATION\": \"In the standard interpretation of the trolley problem, the runaway trolley is heading towards the five people. Pulling the lever diverts the trolley to another track, thus saving the lives of the five people who were in danger.\"\n}\n```",
+        "score": ""
+    },
+    "27": {
+        "category": "Puzzle",
+        "question": "How do you efficiently measure exactly 4 gallons of water with only a 3-gallon, 5-gallon, 4-gallon, and 2-gallon jug?",
+        "human_answer": "Fill up the 4-gallon jug",
+        "correct_answer": "Another option not stated.",
+        "multiple_choice": [
+            "Filling the 2-gallon jug, twice.",
+            "Filling the 5-gallon jug and pouring it into the 4-gallon jug.",
+            "Another option not stated.",
+            "Filling the 5-gallon jug and pouring it into the 3-gallon jug, twice."
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nHow do you efficiently measure exactly 4 gallons of water with only a 3-gallon, 5-gallon, 4-gallon, and 2-gallon jug?\n\n<POSSIBLE ANSWERS>\nA. Filling the 2-gallon jug, twice.\nB. Filling the 5-gallon jug and pouring it into the 4-gallon jug.\nC. Another option not stated.\nD. Filling the 5-gallon jug and pouring it into the 3-gallon jug, twice.\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "```json\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"The most straightforward method among the options to measure exactly 4 gallons is to fill the 2-gallon jug twice, as 2 gallons + 2 gallons equals 4 gallons. This involves repeating a simple action.\"}\n```",
+        "score": ""
+    },
+    "28": {
+        "category": "Popular science",
+        "question": "A 2kg tree grows in a planted pot with 10kg of soil. When the tree grows to 3kg, how much soil is left?",
+        "human_answer": "There is still 10kg of soil. Trees are primarily composed of carbon dioxide and water, not soil.",
+        "correct_answer": "10kg",
+        "multiple_choice": [
+            "10kg",
+            "8kg",
+            "9kg",
+            "11kg"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nA 2kg tree grows in a planted pot with 10kg of soil. When the tree grows to 3kg, how much soil is left?\n\n<POSSIBLE ANSWERS>\nA. 10kg\nB. 8kg\nC. 9kg\nD. 11kg\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "A",
+        "model_answer": "```json\n{\"ANSWER\": \"A\", \"SHORT EXPLANATION\": \"Trees gain mass mainly from carbon dioxide in the air and water, not from consuming the bulk of the soil. The soil provides nutrients, but the amount used for a 1kg increase in tree mass is negligible compared to the total soil amount. Thus, the soil mass remains approximately 10kg.\"}\n```",
+        "score": ""
+    },
+    "29": {
+        "category": "Relational",
+        "question": "A man steps over a 0.5m hurdle. What is the minimum height he could have jumped?",
+        "human_answer": "0m, he didn't jump at all, he stepped over the hurdle.",
+        "correct_answer": "0m",
+        "multiple_choice": [
+            "Slightly higher than 0.5m",
+            "Between 0.1m and 0.5m",
+            "0m",
+            "0.5m"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nA man steps over a 0.5m hurdle. What is the minimum height he could have jumped?\n\n<POSSIBLE ANSWERS>\nA. Slightly higher than 0.5m\nB. Between 0.1m and 0.5m\nC. 0m\nD. 0.5m\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "```json\n{\"ANSWER\": \"B\", \"SHORT EXPLANATION\": \"When stepping over a hurdle, the center of mass does not need to rise to the full height of the hurdle. The body pivots over the supporting leg while the other leg clears the obstacle, requiring a smaller vertical displacement of the center of mass.\"}\n```",
+        "score": ""
+    },
+    "30": {
+        "category": "Popular science",
+        "question": "I walk to my friend's house, averaging 3mph. How fast would I have to run back to double my average speed for the entire trip?",
+        "human_answer": "Instantaneously fast, it is mathematically impossible.",
+        "correct_answer": "Infinitely fast",
+        "multiple_choice": [
+            "12mph",
+            "9mph",
+            "Infinitely fast",
+            "6mph"
+        ],
+        "multi_choice_question": "<MULTIPLE CHOICE QUESTION>\nI walk to my friend's house, averaging 3mph. How fast would I have to run back to double my average speed for the entire trip?\n\n<POSSIBLE ANSWERS>\nA. 12mph\nB. 9mph\nC. Infinitely fast\nD. 6mph\n\n<TASK>\nSelect a single choice letter from the ANSWERS that answer the QUESTION. You should also provide a short explanation (< 100 words). Return your response in JSON format:\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"...\"}.\n",
+        "correct_letter": "C",
+        "model_answer": "```json\n{\"ANSWER\": \"C\", \"SHORT EXPLANATION\": \"To double the average speed to 6mph for the entire trip, the total time must be half the time taken for the first leg. Since the first leg took time d/3, the total time must be d/3. This leaves zero time for the return trip, requiring infinite speed.\"}\n```",
+        "score": ""
+    }
+}
