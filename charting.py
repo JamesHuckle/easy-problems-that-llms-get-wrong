@@ -70,26 +70,51 @@ def define_data(final_stats: pd.DataFrame):
 def create_performance_chart(
     final_stats: pd.DataFrame, title="LLM Linguistic Benchmark Performance", highlight_models=None
 ):
+    """
+    Creates a bar chart showing model performance with confidence intervals.
+
+    Args:
+        final_stats (pd.DataFrame):
+        DataFrame containing model performance data.
+        Must include 'model', 'mean_score', 'ci_lower', 'ci_upper'.
+        title (str): The title of the chart.
+
+        highlight_models (dict, optional):
+        A dictionary where keys are model names and values are the desired colors for those models.
+        Models not in the dictionary default to 'skyblue'.
+    """
     if highlight_models is None:
-        highlight_models = []
+        highlight_models = {}  # Default to an empty dictionary
 
     df = define_data(final_stats)
     # Create a basic barplot
     sns.set_theme(style="whitegrid")
     plt.figure(figsize=(10, 8))
 
-    # Different colors for different models
-    colors = ["skyblue" if model not in highlight_models else "orange" for model in df["Model"]]
+    # Determine colors based on the highlight_models dictionary
+    colors = [
+        highlight_models.get(model, "skyblue") for model in df["Model"]
+    ]  # Use dict.get() with default
+
     barplot = sns.barplot(data=df, y="Model", x="Average", palette=colors, errorbar=None)
 
     # Shade the "Human level*" bar
     for i, bar in enumerate(barplot.patches):
         if df["Model"][i] == "Human level*":
             bar.set_hatch("///")
+            # Ensure human level bar color is consistent if not specified in highlight_models
+            if "Human level*" not in highlight_models:
+                bar.set_facecolor("skyblue")  # Or another default if preferred
 
     # Add confidence intervals (horizontal lines now)
     capwidth = 0.5
     for i, model in enumerate(df["Model"]):
+        # Skip plotting CI for Human level if std_dev is 0 (or CI values are identical)
+        if (
+            model == "Human level*"
+            and df["Confidence Interval Low"][i] == df["Confidence Interval High"][i]
+        ):
+            continue
         plt.plot(
             [df["Confidence Interval Low"][i], df["Confidence Interval High"][i]],
             [i, i],
@@ -115,6 +140,8 @@ def create_performance_chart(
     plt.ylabel("")
     plt.yticks(fontsize=14)
     plt.xticks(fontsize=14)
+    # Adjust x-axis limits to ensure CIs are fully visible, e.g., start from 0
+    plt.xlim(left=0)
     plt.tight_layout()
 
     return barplot, plt

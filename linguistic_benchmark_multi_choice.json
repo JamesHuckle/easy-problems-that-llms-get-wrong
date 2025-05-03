@@ -119,14 +119,14 @@
     {
         "index": 10,
         "category": "Relational",
-        "question": "I get out on the top floor (third floor) at street level. How many stories is the building above the ground?",
+        "question": "I walk out of the top floor (third floor) at street level. How many stories is the building above the street level",
         "human_answer": "One story above the ground, as exiting at street level requires a single story building.",
         "correct_answer": "One story above the ground",
         "multiple_choice": [
-            "Zero stories above the ground",
-            "One story above the ground",
-            "Two stories above the ground",
-            "Three stories above the ground"
+            "Zero stories above street level",
+            "One story above street level",
+            "Two stories above street level",
+            "Three stories above street level"
         ]
     },
     {
@@ -145,7 +145,7 @@
     {
         "index": 12,
         "category": "Spatial",
-        "question": "Four children - Alex, Bella, Charlie, and Dana - are sitting around a picnic table. Alex is facing Bella. Charlie is sitting to the right of Bella. Who is sitting to the left of Alex?",
+        "question": "Four children - Alex, Bella, Charlie, and Dana - are sitting at a four-person table with two sides. Alex is sitting opposite Bella. Charlie is sitting to Bella's right. Who is sitting to the left of Alex?",
         "human_answer": "Dana",
         "correct_answer": "'Dana'",
         "multiple_choice": [
@@ -158,7 +158,7 @@
     {
         "index": 13,
         "category": "Spatial",
-        "question": "A man leaves home at 0m elevation, makes a left turn and walks straight for a km and reaches 300m elevation, makes another left turn and walks straight for a km and reaches 500m elevation, makes another left turn and walks straight for a km and reaches 900m elevation, and turns left again and walks straight for a km. How far away is he from his starting point and what is his final elevation?",
+        "question": "A man leaves home, at 0m elevation (the lowest point), looks up at the unobstructed beautiful sky above him, and makes a 90 degree left turn and walks straight for a km and reaches 300m elevation, makes another 90 degree left turn and walks straight for a km and reaches 500m elevation, makes another 90 degree left turn and walks straight for a km and reaches 900m elevation, and turns 90 degrees left again and walks straight for a km. How far away is he from his starting point and what is his final elevation?",
         "human_answer": "He is back at his starting point and at 0m elevation.",
         "correct_answer": "0m from starting point, 0m elevation.",
         "multiple_choice": [
@@ -236,7 +236,7 @@
     {
         "index": 19,
         "category": "Spatial",
-        "question": "An arrow points up. We rotate it 90 degrees to the left, mirror it along its flat end, and rotate it another 90 degrees to the left. Which direction is it pointing?",
+        "question": "An arrow points up. We rotate it 90 degrees to the left, mirror it along its non-pointy end, and rotate it another 90 degrees to the left. Which direction is it pointing now?",
         "human_answer": "Up",
         "correct_answer": "Up",
         "multiple_choice": [
@@ -366,7 +366,7 @@
     {
         "index": 29,
         "category": "Relational",
-        "question": "A man steps over a 0.5m hurdle. What is the minimum height he could have jumped?",
+        "question": "A man steps over a 0.5m hurdle. What is the minimum height that he jumped?",
         "human_answer": "0m, he didn't jump at all, he stepped over the hurdle.",
         "correct_answer": "0m",
         "multiple_choice": [
