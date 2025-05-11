@@ -34,7 +34,10 @@ def save_answers_as_json(
     if "index" not in answers_df.columns:
         answers_df.reset_index(inplace=True)
     answers_df.set_index("index").to_json(
-        f"{answers_save_path}/final_answers-{model_name}.json", orient="index"
+        f"{answers_save_path}/final_answers-{model_name}.json",
+        orient="index",
+        indent=4,
+        force_ascii=False,
     )
     return answers_df
 

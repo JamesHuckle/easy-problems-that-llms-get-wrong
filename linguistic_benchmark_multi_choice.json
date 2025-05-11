@@ -120,8 +120,8 @@
         "index": 10,
         "category": "Relational",
         "question": "I walk out of the top floor (third floor) at street level. How many stories is the building above the street level",
-        "human_answer": "One story above the ground, as exiting at street level requires a single story building.",
-        "correct_answer": "One story above the ground",
+        "human_answer": "One story above street level, as exiting at street level requires a single story building.",
+        "correct_answer": "One story above street level",
         "multiple_choice": [
             "Zero stories above street level",
             "One story above street level",
