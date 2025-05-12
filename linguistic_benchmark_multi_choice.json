@@ -16,7 +16,7 @@
         "index": 2,
         "category": "Puzzle",
         "question": "Suppose you're on a game show, and you're given the choice of three doors: Behind one door is a gold bar; behind the others, rotten vegetables. You pick a door, say No. 1, and the host asks you 'Do you want to pick door No. 2 instead?' What choice of door now gives you the biggest advantage?",
-        "human_answer": "It is not an advantage to switch. It makes no difference if I switch or not because no additional material information has been provided since the initial choice.",
+        "human_answer": "It is not an advantage to switch. It makes no difference if I switch or not because no additional material information has been provided since the initial choice. The is NOT the Monty Hall problem.",
         "correct_answer": "They have equal probability of winning",
         "multiple_choice": [
             "Door No.1",
@@ -29,7 +29,7 @@
         "index": 3,
         "category": "Spatial",
         "question": "You are playing Russian roulette with a six-shooter revolver. Your opponent puts in five bullets, spins the chambers and fires at himself, but no bullet comes out. He gives you the choice of whether or not you should spin the chambers again before firing at yourself. Should you spin?",
-        "human_answer": "Yes, you should spin again. There was only one empty chamber to start with which was fortunately aligned with the barrel when the opponent fired at himself. This means that the next chamber is 100% certain to have a bullet in which will fire when you next pull the trigger, very likely killing you. However, if you spin the chamber then you have a 5/6 chance of firing a bullet and a 1/6 chance of getting the empty chamber.",
+        "human_answer": "Yes, you should spin again. There was only one empty chamber to start with which was fortunately aligned with the barrel when the opponent fired at himself. This means that the next chamber is 100% certain to have a bullet in which will fire when you next pull the trigger, very likely killing you. However, if you spin the chamber again then you have a 5/6 chance of firing a bullet and a 1/6 chance of getting the empty chamber.",
         "correct_answer": "Yes, you should spin again",
         "multiple_choice": [
             "Yes, you should spin again",
@@ -94,10 +94,10 @@
         "index": 8,
         "category": "Linguistic",
         "question": "Write me a sentence without any words that appear in The Bible",
-        "human_answer": "Cryptographic algorithms safeguard nuclear warheads.",
-        "correct_answer": "Cryptographic algorithms safeguard nuclear warheads.",
+        "human_answer": "Common words like 'the' are what to watch out for. The words, 'Cryptographic algorithms orchestrate nuclear warheads.' are too modern to be in the Bible.",
+        "correct_answer": "Cryptographic algorithms orchestrate nuclear warheads.",
         "multiple_choice": [
-            "Cryptographic algorithms safeguard nuclear warheads.",
+            "Cryptographic algorithms orchestrate nuclear warheads.",
             "Our computer, engineered in a contemporary lab, processes data flawlessly and efficiently.",
             "Quixotic zephyrs vexed the jabberwocky's kumquat garden.",
             "The computer swiftly executed complex algorithms."

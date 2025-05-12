@@ -34,6 +34,11 @@ mapper = {
 }
 
 
+# export mapper
+def get_model_name(model):
+    return mapper.get(model, model)
+
+
 def define_data(final_stats: pd.DataFrame):
     ## Define the data
     # models = ["Human level*", "GPT-4 Turbo", "Claude 3 Opus", "Mistral Large", "Gemini Pro 1.5",
