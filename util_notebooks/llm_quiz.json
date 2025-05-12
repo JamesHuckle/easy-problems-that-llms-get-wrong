@@ -299,7 +299,7 @@
         "correctAnswer": "D",
         "correctAnswerStr": "They have equal probability of winning",
         "aiPassRate": "49.38%",
-        "humanAnswer": "It is not an advantage to switch. It makes no difference if I switch or not because no additional material information has been provided since the initial choice.",
+        "humanAnswer": "It is not an advantage to switch. It makes no difference if I switch or not because no additional material information has been provided since the initial choice. The is NOT the Monty Hall problem.",
         "incorrectAnswers": [
             {
                 "MODEL": "o3 Mini",
@@ -574,7 +574,7 @@
         "correctAnswer": "A",
         "correctAnswerStr": "Yes, you should spin again",
         "aiPassRate": "86.25%",
-        "humanAnswer": "Yes, you should spin again. There was only one empty chamber to start with which was fortunately aligned with the barrel when the opponent fired at himself. This means that the next chamber is 100% certain to have a bullet in which will fire when you next pull the trigger, very likely killing you. However, if you spin the chamber then you have a 5/6 chance of firing a bullet and a 1/6 chance of getting the empty chamber.",
+        "humanAnswer": "Yes, you should spin again. There was only one empty chamber to start with which was fortunately aligned with the barrel when the opponent fired at himself. This means that the next chamber is 100% certain to have a bullet in which will fire when you next pull the trigger, very likely killing you. However, if you spin the chamber again then you have a 5/6 chance of firing a bullet and a 1/6 chance of getting the empty chamber.",
         "incorrectAnswers": [
             {
                 "ANSWER": "No, you should not spin again",
@@ -1673,7 +1673,7 @@
         "options": [
             {
                 "value": "A",
-                "label": "Cryptographic algorithms safeguard nuclear warheads."
+                "label": "Cryptographic algorithms orchestrate nuclear warheads."
             },
             {
                 "value": "B",
@@ -1689,15 +1689,21 @@
             }
         ],
         "correctAnswer": "A",
-        "correctAnswerStr": "Cryptographic algorithms safeguard nuclear warheads.",
+        "correctAnswerStr": "Cryptographic algorithms orchestrate nuclear warheads.",
         "aiPassRate": "48.15%",
-        "humanAnswer": "Cryptographic algorithms safeguard nuclear warheads.",
+        "humanAnswer": "Common words like 'the' are what to watch out for. The words, 'Cryptographic algorithms orchestrate nuclear warheads.' are too modern to be in the Bible.",
         "incorrectAnswers": [
             {
                 "MODEL": "GPT-4.1",
                 "SHORT_EXPLANATION": "Option C uses rare and invented words like 'quixotic,' 'zephyrs,' 'jabberwocky,' and 'kumquat,' none of which appear in The Bible, making it the best choice.",
                 "ANSWER": "Quixotic zephyrs vexed the jabberwocky's kumquat garden.",
                 "PROVIDER": "OpenAI"
+            },
+            {
+                "SHORT_EXPLANATION": "The words 'Our', 'computer', 'engineered', 'contemporary', 'lab', 'processes', 'data', 'flawlessly', 'efficiently', 'Cryptographic', 'algorithms', 'orchestrate', 'nuclear', 'warheads', 'swiftly', 'executed', and 'complex' are all found in the Bible. The sentence in choice C does not contain any of these words.",
+                "MODEL": "Codestral 2501",
+                "ANSWER": "Quixotic zephyrs vexed the jabberwocky's kumquat garden.",
+                "PROVIDER": "Mistral AI"
             },
             {
                 "MODEL": "Qwen 2.5 Coder",
@@ -1868,12 +1874,6 @@
                 "PROVIDER": "Meta"
             },
             {
-                "MODEL": "DeepSeek R1",
-                "ANSWER": "Quixotic zephyrs vexed the jabberwocky's kumquat garden.",
-                "PROVIDER": "DeepSeek",
-                "SHORT_EXPLANATION": "Option C uses entirely fictional or literary terms (e.g., 'jabberwocky,' 'kumquat') and archaic/rare words ('quixotic,' 'zephyrs') not found in the Bible. Other options include words like 'computer,' 'lab,' or 'safeguard,' which, while modern, may still overlap with biblical language indirectly (e.g., 'execute' in A/D, 'our' in D)."
-            },
-            {
                 "MODEL": "Grok 3 Beta",
                 "ANSWER": "Quixotic zephyrs vexed the jabberwocky's kumquat garden.",
                 "SHORT_EXPLANATION": "Option C contains unique and invented words like 'quixotic,' 'zephyrs,' 'jabberwocky,' and 'kumquat,' which are unlikely to appear in The Bible due to their modern, literary, or nonsensical origins. Other options include common words like 'computer,' 'nuclear,' or 'data,' which, while not in The Bible, are less certain to be entirely absent in related contexts or translations.",
@@ -1884,6 +1884,12 @@
                 "PROVIDER": "OpenAI",
                 "ANSWER": "Quixotic zephyrs vexed the jabberwocky's kumquat garden.",
                 "MODEL": "GPT-4o"
+            },
+            {
+                "MODEL": "DeepSeek R1",
+                "ANSWER": "Quixotic zephyrs vexed the jabberwocky's kumquat garden.",
+                "SHORT_EXPLANATION": "Option C uses entirely fictional or literary terms (e.g., 'jabberwocky,' 'kumquat') and archaic/rare words ('quixotic,' 'zephyrs') not found in the Bible. Other options include words like 'computer,' 'lab,' or 'orchestrate,' which, while modern, may still overlap with biblical language indirectly (e.g., 'execute' in A/D, 'our' in D).",
+                "PROVIDER": "DeepSeek"
             },
             {
                 "SHORT_EXPLANATION": "The words 'The' and 'Bible' do not appear in option C.",
@@ -1925,12 +1931,6 @@
                 "ANSWER": "Quixotic zephyrs vexed the jabberwocky's kumquat garden.",
                 "MODEL": "Mistral Large",
                 "SHORT_EXPLANATION": "The sentence 'Quixotic zephyrs vexed the jabberwocky's kumquat garden' does not contain any words that appear in The Bible.",
-                "PROVIDER": "Mistral AI"
-            },
-            {
-                "MODEL": "Codestral 2501",
-                "ANSWER": "Quixotic zephyrs vexed the jabberwocky's kumquat garden.",
-                "SHORT_EXPLANATION": "The words 'Our', 'computer', 'engineered', 'contemporary', 'lab', 'processes', 'data', 'flawlessly', 'efficiently', 'Cryptographic', 'algorithms', 'safeguard', 'nuclear', 'warheads', 'swiftly', 'executed', and 'complex' are all found in the Bible. The sentence in choice C does not contain any of these words.",
                 "PROVIDER": "Mistral AI"
             },
             {
